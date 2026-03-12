@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+
+<style>
+
+body{
+font-family:sans-serif;
+background:#021526;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+input,textarea{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:8px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+background:#047857;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="loginBox">
+
+<h2>Admin Login</h2>
+
+<input type="password" id="pass" placeholder="Password">
+
+<br>
+
+<button onclick="checkPass()">Login</button>
+
+</div>
+
+
+<div id="adminPanel" style="display:none">
+
+<h2>Admin Panel</h2>
+
+<input id="title" placeholder="মনক্বত শিরোনাম">
+
+<textarea id="text" rows="10" placeholder="মনক্বত লিখুন"></textarea>
+
+<br>
+
+<button onclick="addNaat()">মনক্বত যোগ করুন</button>
+
+</div>
+
+<script>
+
+function checkPass(){
+
+let p=document.getElementById("pass").value
+
+if(p=="ojmfrf"){
+
+document.getElementById("loginBox").style.display="none"
+document.getElementById("adminPanel").style.display="block"
+
+}else{
+
+alert("ভুল পাসওয়ার্ড")
+
+}
+
+}
+
+
+function addNaat(){
+
+let title=document.getElementById("title").value
+let text=document.getElementById("text").value
+
+let naats=JSON.parse(localStorage.getItem("naats")) || []
+
+naats.push({title:title,text:text})
+
+localStorage.setItem("naats",JSON.stringify(naats))
+
+alert("মনক্বত যোগ হয়েছে")
+
+}
+
+</script>
+
+</body>
+</html>
