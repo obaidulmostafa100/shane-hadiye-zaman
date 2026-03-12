@@ -183,19 +183,29 @@ body.light .header{
 background:#0f9d58;
 }
 
-.container{
-max-width:420px;
-width:100%;
-margin:auto;
-padding:10px;
-}
-
 body{
 margin:0;
 display:flex;
 justify-content:center;
-background:#021526;
+background:#001a2b;
 font-family:sans-serif;
+}
+
+.container{
+max-width:420px;
+width:100%;
+padding:10px;
+position:relative;
+}
+
+.banner{
+text-align:center;
+margin-bottom:10px;
+}
+
+.banner img{
+width:100%;
+border-radius:12px;
 }
 
 .card{
@@ -207,7 +217,10 @@ text-align:center;
 color:white;
 }
 
-.banner{
+input{
 width:100%;
-border-radius:15px;
+padding:10px;
+border-radius:10px;
+border:none;
+margin:10px 0;
 }
