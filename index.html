@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="manifest" href="manifest.json">
+ <meta name="theme-color" content="#065f46">
 <title>শানে হাদিয়ে যমান</title>
 
 <style>
@@ -3429,11 +3430,11 @@ alert("Favourite Save হয়েছে")
 
 }
 </script>
- <script>
+<script>
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
+navigator.serviceWorker.register('/sw.js');
 }
- </script>
+</script>
 
 </body>
 </html>
